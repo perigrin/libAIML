@@ -164,7 +164,7 @@ sharedstatedir = @sharedstatedir@
 sysconfdir = @sysconfdir@
 target_alias = @target_alias@
 METASOURCES = AUTO
-AM_CXXFLAGS = -Werror -Wall -pedantic -ansi
+AM_CXXFLAGS = -Wall -pedantic -ansi
 stdutil_test_LDADD = $(top_builddir)/src/libstd_utils.a
 INCLUDES = -I$(top_srcdir)/src
 stdutil_test_SOURCES = test.cpp
@@ -209,7 +209,7 @@ clean-noinstPROGRAMS:
 	  echo " rm -f $$p $$f"; \
 	  rm -f $$p $$f ; \
 	done
-stdutil_test$(EXEEXT): $(stdutil_test_OBJECTS) $(stdutil_test_DEPENDENCIES) 
+stdutil_test$(EXEEXT): $(stdutil_test_OBJECTS) $(stdutil_test_DEPENDENCIES)
 	@rm -f stdutil_test$(EXEEXT)
 	$(CXXLINK) $(stdutil_test_LDFLAGS) $(stdutil_test_OBJECTS) $(stdutil_test_LDADD) $(LIBS)
 
