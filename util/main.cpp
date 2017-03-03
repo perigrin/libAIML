@@ -67,7 +67,6 @@ int main ( int argc, char* argv[] )
 
     cGraphMaster graphmaster ( file_gossip_stream, last_error, *this);
     aiml_parser ( graphmaster, last_error );
-    aisl_parser ( graphmaster, last_error );
     caiml_parser( graphmaster, last_error );
 
     bool ret = aiml_parser.parse ( parser.input ( ), false, false );
@@ -78,22 +77,8 @@ int main ( int argc, char* argv[] )
     if ( parser.fromType ( ) == "caiml" )  {
       fromType = cInterpreter::TYPE_CAIML;
     }
-    else if ( parser.fromType ( ) == "aisl" )  {
-#ifdef ENABLE_AISL
-      fromType = cInterpreter::TYPE_AISL;
-#else
-      cout << "AISL support not enabled." << endl;
-#endif
-    }
     if ( parser.toType ( ) == "aiml" )  {
       toType = cInterpreter::TYPE_AIML;
-    }
-    else if ( parser.toType ( ) == "aisl" )  {
-#ifdef ENABLE_AISL
-      toType = cInterpreter::TYPE_AISL;
-#else
-      cout << "AISL support not enabled." << endl;
-#endif
     }
     std::vector<string> list = parser.input ( );
     std::vector<string>::iterator it = list.begin ( );

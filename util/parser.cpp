@@ -101,12 +101,12 @@ bool Parser::parseCommandLine ( int iArgs, char *pArguments[] )
     printHelp ( );
   }
   else {
-    m_strFromType = getExtension ( strInput ); 
+    m_strFromType = getExtension ( strInput );
     if ( ! bSpecType )  {
       // The user did not specify the output type, so we should deduct this from teh file extension
       m_strToType = getExtension ( m_strOutputName );
     }
-    if ( ( m_strToType != "aiml" ) && ( m_strToType != "caiml" ) && ( m_strToType != "aisl" ) )  {
+    if ( ( m_strToType != "aiml" ) && ( m_strToType != "caiml" ) )  {
       cout << "Wrong output type defined " << m_strToType << endl << endl;
       printHelp ( );
     }
@@ -125,7 +125,7 @@ void Parser::printHelp ( )
   cout << " -v  --verbose lvl logging level [0..5] where 0=no output." << endl << endl;
 
   cout << " -i  --in   FILE set log file name." << endl;
-  cout << " -t  --type TYPE, where type can be aiml, caiml, or aisl" << endl;
+  cout << " -t  --type TYPE, where type can be aiml or caiml" << endl;
   cout << " -o  --out  FILE set output file." << endl << endl;
 }
 

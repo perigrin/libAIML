@@ -37,7 +37,6 @@
 #include "serializer.h"
 #include "graphmaster.h"
 #include "aiml_parser.h"
-#include "aisl_parser.h"
 #include "caiml_parser.h"
 #include "user_manager.h"
 #include "config_parser.h"
@@ -94,7 +93,6 @@ namespace aiml {
       /** Internal modules **/
       cGraphMaster graphmaster;
       AIMLparser   aiml_parser;
-      AISLparser   aisl_parser;
       CAIMLparser caiml_parser;
 
       /** Configuration options/vars **/

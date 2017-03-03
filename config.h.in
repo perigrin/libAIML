@@ -1,13 +1,7 @@
 /* config.h.in.  Generated from configure.in by autoheader.  */
 
-/* Enable compilation of AISL writer/reader */
-#undef ENABLE_AISL
-
 /* Enable compilation of CAIML writer/reader */
 #undef ENABLE_CAIML
-
-/* Enable JavaScript API integration */
-#undef ENABLE_JAVASCRIPT
 
 /* Enable PCRE support */
 #undef ENABLE_PCRECPP
